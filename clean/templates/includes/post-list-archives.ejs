@@ -1,0 +1,43 @@
+<!-- Page Header -->
+  <header class="masthead" style="background-image: url('<%=themeConfig.domain %>/media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1 class="tag-tl">Archives</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <%let years=[];posts.forEach((item)=>{const year=item.date.substring(0,4);if(!years.includes(year)){years.push(year)}});%>
+      <%years.forEach(function(year){%>
+        <div class="col-lg-8 col-md-10 mx-auto">
+           
+          <div class="post-archives">
+            
+    <h2 class="year"><%-year%></h2>
+    <%posts.forEach(function(post){%>
+                <%if(post.date.indexOf(year)!==-1){%>
+        <a href="<%= post.link %>" class="post" target="blank">
+          <h2 class="post-title Archives">
+            <%= post.title %>
+          </h2>
+          <div class="time post-meta"><%= post.dateFormat %></div>
+        </a>
+  <%}%>
+                    <%});%>
+        </div>
+        
+        </div>
+        <%});%>
+      </div>
+    </div>
+  </article>
+

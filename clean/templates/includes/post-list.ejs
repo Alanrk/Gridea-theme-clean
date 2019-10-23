@@ -1,0 +1,35 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       <% posts.forEach(function(post) { %>
+        <div class="post-preview">
+          <a href="<%= post.link %>" target="blank">
+            <h2 class="post-title">
+              <%= post.title %>
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <%- post.abstract %>
+            </h3>
+          <p class="post-meta">
+             <span class="time"><%= post.dateFormat %></span>
+             <span>,</span>
+             <span class="post-stats"><%= post.stats.text %></span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        <% }); %>
+        <% if (pagination.prev) { %>
+        <a class="btn btn-primary float-left" href="<%= pagination.prev %>">上一页 &rarr;</a>
+        <% } %>
+        <% if (pagination.next) { %>
+        <a class="btn btn-primary float-right" href="<%= pagination.next %>">下一页 &rarr;</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+  
