@@ -27,7 +27,6 @@
       </div>
     </div>
   </nav>
-
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('<%=themeConfig.domain %>/media/images/home-bg.jpg')">
     <div class="overlay"></div>
@@ -45,7 +44,6 @@
             	Posted on
               <%= post.dateFormat %>，<%= post.stats.text %>
             </span>
-
           </div>
         </div>
       </div>
@@ -57,7 +55,6 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-
           <%- post.content %>
           <% if (post.nextPost && !post.hideInList) { %>
           <p class="next-post">下一篇：
@@ -73,20 +70,15 @@
           <% if (commentSetting.commentPlatform === 'gitalk') { %>
             <%- include('./includes/gitalk') %>
           <% } %>
-
           <% if (commentSetting.commentPlatform === 'disqus') { %>
             <%- include('./includes/disqus') %>
           <% } %>
         <% } %>
-
         </div>
       </div>
     </div>
   </article>
-
-
  <%- include('./includes/footer') %>
-
   </body>
 </html>
 

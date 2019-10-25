@@ -11,7 +11,6 @@
       </div>
     </div>
   </header>
-
   <!-- Post Content -->
   <article>
     <div class="container">
@@ -19,9 +18,7 @@
         <%let years=[];posts.forEach((item)=>{const year=item.date.substring(0,4);if(!years.includes(year)){years.push(year)}});%>
       <%years.forEach(function(year){%>
         <div class="col-lg-8 col-md-10 mx-auto">
-           
           <div class="post-archives">
-            
     <h2 class="year"><%-year%></h2>
     <%posts.forEach(function(post){%>
                 <%if(post.date.indexOf(year)!==-1){%>
@@ -34,7 +31,6 @@
   <%}%>
                     <%});%>
         </div>
-        
         </div>
         <%});%>
       </div>
