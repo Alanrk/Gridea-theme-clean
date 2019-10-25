@@ -22,7 +22,7 @@
     <h2 class="year"><%-year%></h2>
     <%posts.forEach(function(post){%>
                 <%if(post.date.indexOf(year)!==-1){%>
-        <a href="<%= post.link %>" class="post" target="blank">
+        <a href="<%= post.link %>" class="post">
           <h2 class="post-title Archives">
             <%= post.title %>
           </h2>
