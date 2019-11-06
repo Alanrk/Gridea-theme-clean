@@ -2,6 +2,11 @@
 <html>
   <head>
     <%- include('./includes/head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+    <meta property="og:description" content="<%= post.title %>"/>
+    <meta property="og:url" content="<%= post.link %>"/>
+    <meta property="og:locale" content="zh-CN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="<%= themeConfig.siteName %>"/>
   </head>
   <body>
   	<!-- Navigation -->
