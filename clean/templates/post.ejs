@@ -33,7 +33,7 @@
     </div>
   </nav>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/images/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('<%= themeConfig.domain %>/media/images/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -65,7 +65,7 @@
           <p class="next-post">下一篇：
             <a href="<%= post.nextPost.link %>">
               <span class="post-title">
-                <%= post.nextPost.title %>
+                <%= post.nextPost.title %>&rarr;
               </span>
             </a>
           </p>
