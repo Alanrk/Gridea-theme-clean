@@ -15,9 +15,9 @@
   <article>
     <div class="container">
       <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
         <%let years=[];posts.forEach((item)=>{const year=item.date.substring(0,4);if(!years.includes(year)){years.push(year)}});%>
       <%years.forEach(function(year){%>
-        <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-archives">
     <h2 class="year"><%-year%></h2>
     <%posts.forEach(function(post){%>
@@ -31,9 +31,14 @@
   <%}%>
                     <%});%>
         </div>
-        </div>
         <%});%>
+        <% if (pagination.prev) { %>
+        <a class="btn btn-primary float-left" href="<%= pagination.prev %>">&larr; 上一页</a>
+        <% } %>
+        <% if (pagination.next) { %>
+        <a class="btn btn-primary float-right" href="<%= pagination.next %>">下一页 &rarr;</a>
+        <% } %>
+      </div>
       </div>
     </div>
   </article>
-
